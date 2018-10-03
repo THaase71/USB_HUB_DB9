@@ -1,0 +1,119 @@
+
+(rules PCB UBSHub
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 303)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.6)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.6)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_600:300_um"
+    (shape
+      (circle F.Cu 600.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-1]_1200:800_um"
+    (shape
+      (circle F.Cu 1200.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 1200.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_1200:800_um" "Via[0-1]_1200:800_um" default
+  )
+  (via 
+    "Via[0-1]_1200:800_um-kicad_default" "Via[0-1]_1200:800_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_600:300_um-Power" "Via[0-1]_600:300_um" Power
+  )
+  (via 
+    "Via[0-1]_1200:800_um-Power" "Via[0-1]_1200:800_um" Power
+  )
+  (via 
+    "Via[0-1]_600:300_um" "Via[0-1]_600:300_um" default
+  )
+  (via 
+    "Via[0-1]_600:300_um-kicad_default" "Via[0-1]_600:300_um" "kicad_default"
+  )
+  (via_rule
+    Power "Via[0-1]_1200:800_um-Power"
+  )
+  (via_rule
+    default "Via[0-1]_600:300_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_600:300_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    VCC GND "D1-" D1+ "D2-" D2+ "Net-(R13-Pad1)" +3V3
+    328RST "/USBHubPorts/D4-" /USBHubPorts/D4+ "/USBHubPorts/D6-" /USBHubPorts/D6+ "/USBHubPorts/D7-" /USBHubPorts/D7+ /USBHubPorts/DM+
+    "/USBHubPorts/DM-" "/USBHubPorts/D3-" /USBHubPorts/D3+ "/USBHubLED/LED_DRV" /USBHubLED/LED1 /USBHubLED/LED4 /USBHubLED/LED5 /USBHubLED/LED6
+    /USBHubLED/LED7 /USBHubLED/LED3 /USBHubLED/LED2 "/USBHubLED/LED1_GO" "/USBHubLED/LED4_GO" "/USBHubLED/LED5_GO" "/USBHubLED/LED6_GO" "/USBHubLED/LED7_GO"
+    "/USBHubLED/LED3_GO" "/USBHubLED/LED2_GO" "/DB9toUSB2/AT_D2+" "/DB9toUSB2/AT_D2-" "/DB9toUSB1/AT_D1+" "/DB9toUSB1/AT_D1-" D5+ "D5-"
+    "/DB9toUSB1/AT328_1_PB5" "/DB9toUSB1/XTAL1_1" "/DB9toUSB1/XTAL1_2" "/DB9toUSB2/XTAL2_1" "/DB9toUSB2/XTAL2_2" "/DB9toUSB1/AT328_1_PB3" "/DB9toUSB1/AT328_1_PB4" "/DB9toUSB1/AT328_1_PD7"
+    "/DB9toUSB1/AT328_1_PB2" "/DB9toUSB1/AT328_1_PB1" "/DB9toUSB1/AT328_1_PB0" "/USBHubOSC/XTAL3_2" "/USBHubOSC/XTAL3_1" "/DB9toUSB2/AT328_2_PC1" "/DB9toUSB2/AT328_2_PC0" "/USBHubPower/VDD1_8"
+    "/ESP32/ESP32_V3_3" "/DB9toUSB2/AT328_2_PB3" "/DB9toUSB2/AT328_2_PB5" "/DB9toUSB2/AT328_2_PB4" "/DB9toUSB2/AT328_2_PD7" "/DB9toUSB2/AT328_2_PB0" "/DB9toUSB2/AT328_2_PB1" "/DB9toUSB2/AT328_2_PB2"
+    "/DB9toUSB2/AT328_2_PC3" "/DB9toUSB2/AT328_2_PC2" "/ESP32/ESP32_RXD0" "/ESP32/ESP32_TXD0" /USBHubPower/VMBUS "/DB9toUSB1/AT328_1_PC1" "/DB9toUSB1/AT328_1_PC0" "/DB9toUSB1/AT328_1_PC2"
+    "/DB9toUSB1/AT328_1_PC3" "/ESP32/ESP32_BOOT" "/ESP32/ESP32_EN" "Net-(D9-Pad2)" "Net-(R22-Pad2)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class Power
+    (clearance_class Power)
+    (via_rule Power)
+    (rule
+      (width 1200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
