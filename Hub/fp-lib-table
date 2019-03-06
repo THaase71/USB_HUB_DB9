@@ -1,4 +1,5 @@
 (fp_lib_table
-  (lib (name OwnFootprints)(type KiCad)(uri ${KIPRJMOD}/Footprints)(options "")(descr ""))
+  (lib (name LCSC)(type KiCad)(uri ${KIPRJMOD}/LCSC)(options "")(descr ""))
+  (lib (name DE10)(type KiCad)(uri ${KIPRJMOD}/DE10)(options "")(descr ""))
   (lib (name ESP32-footprints-Lib)(type KiCad)(uri ${KIPRJMOD}/ESP32-Footprints/ESP32-footprints-Lib.pretty)(options "")(descr ""))
 )

@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 8
+Sheet 4 7
 Title "MiSTer USB HUB DB9"
 Date "2018-07-31"
 Rev "1.0"
@@ -353,8 +353,8 @@ $Comp
 L 2Port_USB2_0:2Port_USB2_0 J10
 U 1 1 5B5BEA28
 P 8500 2600
-F 0 "J10" H 8500 3165 50  0000 C CNN
-F 1 "2Port_USB2_0" H 8500 3074 50  0000 C CNN
+F 0 "J10" H 8500 2600 50  0000 C CNN
+F 1 "2Port_USB2_0" H 8500 2800 50  0000 C CNN
 F 2 "LCSC:USB_A_Female_DoubleLayer-C12049" H 8500 2600 50  0001 C CNN
 F 3 "DOCUMENTATION" H 8500 2600 50  0001 C CNN
 	1    8500 2600
@@ -449,8 +449,6 @@ Wire Wire Line
 	6350 2850 6400 2850
 Connection ~ 6400 2850
 Wire Wire Line
-	6400 2850 6450 2850
-Wire Wire Line
 	6450 2500 6450 2850
 Wire Wire Line
 	1550 2400 1550 2900
@@ -523,8 +521,6 @@ Wire Wire Line
 Wire Wire Line
 	6100 4200 6800 4200
 Wire Wire Line
-	6450 2850 6800 2850
-Wire Wire Line
 	6650 4300 6650 3000
 Wire Wire Line
 	6100 4300 6650 4300
@@ -536,8 +532,9 @@ Text GLabel 6850 4400 2    50   Input ~ 0
 D5-
 Text GLabel 6850 4500 2    50   Input ~ 0
 D5+
-Connection ~ 6450 2850
 Wire Wire Line
 	6450 2850 6450 3000
 Connection ~ 9750 2500
+Wire Wire Line
+	6400 2850 6800 2850
 $EndSCHEMATC

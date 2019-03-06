@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 8
+Sheet 2 7
 Title "MiSTer USB HUB DB9"
 Date "2018-07-31"
 Rev "1.0"
@@ -563,8 +563,6 @@ Wire Wire Line
 NoConn ~ 4700 3500
 NoConn ~ 4700 3400
 Wire Wire Line
-	4700 3000 5100 3000
-Wire Wire Line
 	6450 3000 6450 3400
 Connection ~ 6450 3400
 Wire Wire Line
@@ -701,17 +699,9 @@ AT328_1_PB4
 Text Label 5250 2600 0    50   ~ 0
 AT328_1_PB5
 Wire Wire Line
-	5100 3000 6450 3000
-Wire Wire Line
-	5100 3100 5100 3200
-Wire Wire Line
 	5100 2600 5100 3000
 Wire Wire Line
 	4700 3100 5100 3100
-Wire Wire Line
-	5100 3200 5100 3300
-Wire Wire Line
-	5100 3300 5100 3650
 Wire Wire Line
 	4700 3200 5100 3200
 Wire Wire Line
@@ -732,16 +722,14 @@ Wire Wire Line
 	6800 5200 7050 5200
 Wire Wire Line
 	7150 5200 7400 5200
-Connection ~ 5100 3000
-Wire Wire Line
-	5100 3000 5100 3100
-Connection ~ 5100 3100
 Wire Wire Line
 	5100 3100 6250 3100
-Connection ~ 5100 3200
 Wire Wire Line
 	5100 3200 6950 3200
-Connection ~ 5100 3300
 Wire Wire Line
 	5100 3300 5750 3300
+Wire Wire Line
+	4700 3000 6450 3000
+Wire Wire Line
+	5100 3000 5100 3650
 $EndSCHEMATC

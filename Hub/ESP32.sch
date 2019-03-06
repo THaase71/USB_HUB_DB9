@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 8 8
+Sheet 7 7
 Title ""
 Date ""
 Rev ""
@@ -28,7 +28,7 @@ $EndComp
 Wire Wire Line
 	4250 4050 3650 4050
 Wire Wire Line
-	4250 4150 3650 4150
+	4250 4150 3700 4150
 Text GLabel 3650 4050 0    50   Input ~ 0
 D5+
 Text GLabel 3650 4150 0    50   Input ~ 0
@@ -234,7 +234,7 @@ ESP32_EN
 Wire Wire Line
 	7000 3700 7000 3800
 Wire Wire Line
-	3850 3250 3850 5700
+	3850 3250 3850 4550
 Wire Wire Line
 	3850 5700 6400 5700
 Connection ~ 3850 3250
@@ -315,4 +315,25 @@ Wire Wire Line
 	3200 3250 3850 3250
 Wire Wire Line
 	6400 4500 6400 5700
+$Comp
+L Device:R_Small R25
+U 1 1 5C79333B
+P 3700 4450
+F 0 "R25" H 3500 4500 50  0000 L CNN
+F 1 "1k8" H 3500 4400 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 3700 4450 50  0001 C CNN
+F 3 "~" H 3700 4450 50  0001 C CNN
+	1    3700 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 4150 3700 4350
+Connection ~ 3700 4150
+Wire Wire Line
+	3700 4150 3650 4150
+Wire Wire Line
+	3700 4550 3850 4550
+Connection ~ 3850 4550
+Wire Wire Line
+	3850 4550 3850 5700
 $EndSCHEMATC
